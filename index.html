@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peugeot 5008 – nabídka odkupu nebo převzetí leasingu | Tomáš Kalivoda</title>
+<meta name="description" content="Rodinný Peugeot 5008 (7 míst, automat, 9/2024, 25 tis. km) hledá nového majitele – odkup, nebo převzetí výhodného operativního leasingu od Arvalu.">
+<meta property="og:title" content="Peugeot 5008 – odkup nebo převzetí leasingu">
+<meta property="og:description" content="7 míst · automat · 1. registrace 9/2024 · najeto ~25 000 km. Odkup cca 681 tis. Kč, nebo operativní leasing 8 837 Kč/měs vč. pojištění a pneu.">
+<meta property="og:url" content="https://auto.tomaskalivoda.cz/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+<style>
+  :root {
+    --ink: #1a2332;
+    --ink-soft: #46536a;
+    --paper: #f6f7f9;
+    --card: #ffffff;
+    --accent: #0e5da8;
+    --accent-dark: #0a4076;
+    --amber: #e8a020;
+    --line: #e2e6ec;
+    --green: #1e7d4f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    background: linear-gradient(135deg, #10243e 0%, #0e5da8 100%);
+    color: #fff;
+    padding: 56px 0 48px;
+  }
+  .eyebrow {
+    display: inline-block;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: .82rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  h1 { font-size: clamp(1.8rem, 4.5vw, 2.7rem); line-height: 1.15; margin-bottom: 14px; }
+  .lead { font-size: 1.08rem; max-width: 640px; color: rgba(255,255,255,.88); }
+  .hero-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .hero-facts span {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: .92rem;
+    white-space: nowrap;
+  }
+
+  section { padding: 44px 0 6px; }
+  h2 { font-size: 1.45rem; margin-bottom: 18px; }
+  h2 .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    font-size: .95rem; margin-right: 10px; vertical-align: -4px;
+  }
+  p.section-intro { color: var(--ink-soft); max-width: 700px; margin-bottom: 22px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 28px;
+    box-shadow: 0 1px 3px rgba(16,36,62,.05);
+  }
+
+  .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0 32px; }
+  .spec-grid dl { margin: 0; }
+  .spec-grid div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .spec-grid dt { color: var(--ink-soft); font-size: .93rem; }
+  .spec-grid dd { font-weight: 600; text-align: right; font-size: .93rem; }
+
+  .equip { columns: 2; column-gap: 40px; margin-top: 8px; }
+  .equip li { break-inside: avoid; padding: 5px 0 5px 26px; position: relative; list-style: none; color: var(--ink-soft); font-size: .95rem; }
+  .equip li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+
+  .options { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+  .option { display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .option .tag {
+    position: absolute; top: 0; right: 0;
+    background: var(--amber); color: #3a2a00;
+    font-size: .75rem; font-weight: 700; letter-spacing: .03em;
+    padding: 5px 14px; border-bottom-left-radius: 10px;
+  }
+  .option h3 { font-size: 1.18rem; margin-bottom: 6px; }
+  .option .sub { color: var(--ink-soft); font-size: .92rem; margin-bottom: 16px; }
+  .price { font-size: 2rem; font-weight: 800; color: var(--accent-dark); line-height: 1.1; }
+  .price small { font-size: .95rem; font-weight: 600; color: var(--ink-soft); }
+  .price-note { font-size: .85rem; color: var(--ink-soft); margin: 6px 0 16px; }
+  .option ul { margin: 0 0 14px; padding: 0; }
+  .option ul li { list-style: none; padding: 6px 0 6px 26px; position: relative; font-size: .94rem; color: var(--ink-soft); }
+  .option ul li::before { content: "•"; position: absolute; left: 8px; color: var(--accent); font-weight: 700; }
+  .option .fine { font-size: .82rem; color: var(--ink-soft); margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line); }
+
+  .breakdown { background: #eef3f9; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; font-size: .9rem; }
+  .breakdown div { display: flex; justify-content: space-between; padding: 3px 0; }
+  .breakdown .total { border-top: 1px solid #c9d6e6; margin-top: 6px; padding-top: 8px; font-weight: 700; }
+
+  .leasing-includes { margin-top: 26px; }
+  .leasing-includes .card { background: #f2f8f4; border-color: #d5e7dc; }
+
+  .timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .timeline .card { padding: 18px 20px; }
+  .timeline b { display: block; color: var(--accent-dark); font-size: .95rem; margin-bottom: 4px; }
+  .timeline span { font-size: .9rem; color: var(--ink-soft); }
+
+  .contact {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 16px;
+    padding: 34px 30px;
+    margin: 44px 0 30px;
+    display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;
+  }
+  .contact h2 { margin-bottom: 6px; }
+  .contact p { color: rgba(255,255,255,.75); font-size: .95rem; max-width: 420px; }
+  .contact-links { display: flex; flex-direction: column; gap: 10px; }
+  .contact-links a {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.22);
+    color: #fff; text-decoration: none;
+    padding: 12px 22px; border-radius: 10px;
+    font-weight: 600; font-size: 1.02rem;
+    transition: background .15s;
+  }
+  .contact-links a:hover { background: rgba(255,255,255,.2); }
+
+  footer { text-align: center; color: var(--ink-soft); font-size: .82rem; padding: 10px 0 36px; }
+
+  @media (max-width: 720px) {
+    .options { grid-template-columns: 1fr; }
+    .equip { columns: 1; }
+    header { padding: 42px 0 36px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Nabídka pro známé · červenec 2026</div>
+    <h1>Peugeot 5008 – rodinné sedmimístné SUV hledá nového majitele</h1>
+    <p class="lead">Dostáváme služební auto, a tak předáváme náš zánovní Peugeot 5008 na operativní leasing od Arvalu. Jsou dvě cesty, jak ho získat – <b>odkoupit</b>, nebo <b>převzít výhodný operativní leasing</b> se vším všudy.</p>
+    <div class="hero-facts">
+      <span>🚗 7 míst</span>
+      <span>⚙️ Automat EAT8</span>
+      <span>⛽ Diesel 1.5 BlueHDi · 5,9 l/100 km</span>
+      <span>📅 1. registrace 9/2024</span>
+      <span>🛣️ Najeto ~25 000 km</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2><span class="num">1</span>O jaké auto jde</h2>
+  <p class="section-intro">Peugeot 5008 ALLURE PACK 1.5 BlueHDi 130 S&amp;S EAT8 – prostorné rodinné SUV se sedmi místy, automatem a úsporným dieselem. Vůz je od nového v jedné rodině, servisovaný výhradně v rámci full-service leasingu Arval (údržba, pneuservis i pojistné události řeší Arval). Nový stál včetně výbavy cca 1,1 mil. Kč vč. DPH.</p>
+  <div class="card">
+    <div class="spec-grid">
+      <dl>
+        <div><dt>Model</dt><dd>Peugeot 5008 Allure Pack</dd></div>
+        <div><dt>Motor</dt><dd>1.5 BlueHDi 130 S&amp;S (diesel)</dd></div>
+        <div><dt>Výkon</dt><dd>96 kW / 131 k</dd></div>
+        <div><dt>Převodovka</dt><dd>automatická EAT8 (8°)</dd></div>
+        <div><dt>Počet míst</dt><dd>7</dd></div>
+      </dl>
+      <dl>
+        <div><dt>1. registrace</dt><dd>26. 9. 2024</dd></div>
+        <div><dt>Nájezd</dt><dd>cca 25 000 km</dd></div>
+        <div><dt>Spotřeba (komb.)</dt><dd>5,9 l/100 km</dd></div>
+        <div><dt>Barva</dt><dd>šedá Artense metalíza</dd></div>
+        <div><dt>Interiér</dt><dd>černý, látka COLYN</dd></div>
+      </dl>
+    </div>
+    <ul class="equip" style="margin-top:22px">
+      <li>7 míst (3. řada sedadel)</li>
+      <li>Vyhřívaná přední sedadla</li>
+      <li>Couvací kamera 180° (Visiopark 1)</li>
+      <li>Přední i zadní parkovací senzory</li>
+      <li>Hands-free elektrické víko kufru</li>
+      <li>Advanced Grip Control (jízda v terénu/sněhu)</li>
+      <li>Sada zimních pneumatik (v rámci leasingu)</li>
+      <li>Kompletní servisní historie u Arvalu</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">2</span>Dvě cesty, jak auto získat</h2>
+  <div class="options">
+
+    <div class="card option">
+      <div class="tag">NEJVÝHODNĚJŠÍ</div>
+      <h3>A) Převzetí operativního leasingu</h3>
+      <div class="sub">Nová smlouva přímo s Arvalem (změna nájemce) – auto bez starostí, bez vstupní investice.</div>
+      <div class="price">8 837 Kč <small>/ měsíc vč. DPH</small></div>
+      <div class="price-note">(7 303 Kč bez DPH) · 36 měsíců · nájezd 10 000 km/rok</div>
+      <ul>
+        <li>V ceně povinné ručení i havarijní pojištění</li>
+        <li>V ceně pneumatiky vč. zimních a přezouvání</li>
+        <li>Žádná akontace – platíte jen měsíční nájem</li>
+        <li>Poplatek za převod smlouvy 7 500 Kč <b>hradím já</b></li>
+        <li>Vhodné pro firmy, OSVČ i soukromé osoby</li>
+      </ul>
+      <div class="fine">Podmínkou je schválení nového nájemce Arvalem (standardní prověření bonity). Přesný rozsah služeb potvrdí Arval v návrhu smlouvy.</div>
+    </div>
+
+    <div class="card option">
+      <h3>B) Odkup vozu</h3>
+      <div class="sub">Auto do vašeho vlastnictví – vypořádám leasing a vůz na vás převedu.</div>
+      <div class="price">680 800 Kč <small>vč. DPH</small></div>
+      <div class="price-note">Indikativní cena k červenci 2026, viz rozpad níže.</div>
+      <div class="breakdown">
+        <div><span>Odkupní cena vozu (Arval)</span><span>593 100 Kč</span></div>
+        <div><span>Předčasné ukončení leasingu</span><span>87 700 Kč</span></div>
+        <div class="total"><span>Celkem vč. DPH</span><span>680 800 Kč</span></div>
+      </div>
+      <ul>
+        <li>Fakticky zánovní vůz – nový stál cca 1,1 mil. Kč vč. DPH</li>
+        <li>Cenu Arval přepočítává každý měsíc – postupně klesá</li>
+        <li>Možná je i pozdější dohoda (např. odkup později na podzim, až cena klesne)</li>
+      </ul>
+      <div class="fine">Ceny vychází z oficiálních kalkulací Arvalu (nabídka odkupu + kalkulace předčasného ukončení, červenec 2026). Přesnou částku potvrdí Arval k datu transakce.</div>
+    </div>
+
+  </div>
+
+  <div class="leasing-includes">
+    <div class="card">
+      <h3 style="margin-bottom:10px">Co všechno operativní leasing Arval zahrnuje</h3>
+      <p style="color:var(--ink-soft); font-size:.93rem; margin-bottom:12px">Operativní leasing = auto bez starostí za fixní měsíční platbu. Současná smlouva k tomuto vozu zahrnuje:</p>
+      <ul class="equip">
+        <li>Povinné ručení</li>
+        <li>Havarijní pojištění (spoluúčast 5 %, min. 5 000 Kč)</li>
+        <li>Pojištění skel</li>
+        <li>Kompletní údržbu a opravy</li>
+        <li>Pneumatiky Premium vč. zimních (neomezeně)</li>
+        <li>Náhradní vozidlo (ihned)</li>
+        <li>Arval Assistance (asistenční služba)</li>
+        <li>Správu pojistných událostí</li>
+        <li>Dálniční známku</li>
+        <li>Rozhlasový poplatek</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">3</span>Jak to bude probíhat</h2>
+  <div class="timeline">
+    <div class="card"><b>Nyní</b><span>Ozvěte se mi – rád vše ukážu, auto si můžete prohlédnout a projet (Praha 2 – Vinohrady).</span></div>
+    <div class="card"><b>Od konce července 2026</b><span>Vůz je k předání – přebíráme služební auto, Peugeot uvolňujeme.</span></div>
+    <div class="card"><b>Převod / odkup</b><span>Převod leasingu vyřídíme s Arvalem (schválení bonity), odkup vypořádám já a auto na vás převedu.</span></div>
+  </div>
+</section>
+
+<div class="contact">
+  <div>
+    <h2>Máte zájem nebo otázku?</h2>
+    <p>Nabízím přednostně známým a lidem z okolí. Klidně nabídku pošlete dál někomu, komu by sedmimístné rodinné auto udělalo radost.</p>
+  </div>
+  <div class="contact-links">
+    <a href="tel:+420777202132">📞 777 202 132</a>
+    <a href="mailto:jsem@tomaskalivoda.cz">✉️ jsem@tomaskalivoda.cz</a>
+  </div>
+</div>
+
+<footer>
+  Tomáš Kalivoda · auto.tomaskalivoda.cz · ceny jsou indikativní dle kalkulací Arval CZ (červenec 2026), nejde o závaznou nabídku
+</footer>
+
+</div>
+</body>
+</html>
